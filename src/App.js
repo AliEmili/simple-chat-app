@@ -1,4 +1,6 @@
 import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { connect } from "react-redux";
+import auth from "./Store/Reducers/authReducer";
 
 function App() {
   return (
@@ -13,4 +15,10 @@ function App() {
   );
 }
 
-export default App;
+const mapStateToProps = (state) => ({
+  ...state.auth,
+});
+
+const mapDispatchToProps = (dispatch) => ({});
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
