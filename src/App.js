@@ -11,6 +11,7 @@ import * as ChatActions from "./Store/Actions/chatActions";
 import React from "react";
 import Auth from "./Components/Pages/Auth";
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./Assets/Css/swag.css";
 
 function RequireAuth({ children }) {
   let location = useLocation();
